@@ -1,5 +1,7 @@
 #!/bin/bash
 
+defaultfn()
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -36,6 +38,11 @@ function list_users_with_read_access {
     fi
 }
 
+function defaultfn {
+    expearg=2
+    if [ $# -ne $expearg ]; then
+    echo " pass correct arguments "
+}
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
